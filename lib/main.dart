@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_example/circle_waves/circle_wave.dart';
+import 'package:flutter_animation_example/titok/titok_spinner.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,12 +33,23 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    return TikTokSpinnerExample();
     return Column(
       children: [
         const SizedBox(height: 32),
-        ElevatedButton(onPressed: () {
-          push(CircleWaveExample());
-        }, child: Text('Circle Wave')),
+        ElevatedButton(
+          onPressed: () {
+            push(CircleWaveExample());
+          },
+          child: Text('Circle Wave'),
+        ),
+        const SizedBox(height: 32),
+        ElevatedButton(
+          onPressed: () {
+            push(TikTokSpinnerExample());
+          },
+          child: Text('Tiktok Spinner'),
+        ),
       ],
     );
   }
